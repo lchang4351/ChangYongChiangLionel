@@ -9,7 +9,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    padding: 10px;
 }
 
 
@@ -24,16 +24,21 @@ body {
 
 /* Add in your own customisations */
 
+.sections{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
 table, th, td{
     border: 1px solid;
     border-color: #ddd;
     border-collapse: collapse;
     padding: 10px;
+    text-align: left;
 }
 
-th, td{
-    display: flex;
-    justify-content: flex-start;
+table{
+    width: 100%;
 
 }
 
@@ -52,67 +57,5 @@ footer{
     justify-content: center;
 }
 
-.container{
-    display: grid;
-    border: 1px solid;
-    border-color: #ddd;
-    border-collapse: collapse;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-}
 
-.container > span{
-    border: 1px solid;
-    border-color: #ddd;
-    border-collapse: collapse;
-    padding: 10px;
-}   
 
-.item1{
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.item2{
-    grid-row-start: 2;
-}
-
-.item3{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-}
-
-.item4{
-    grid-row-start: 3;
-}
-
-.item6{
-    grid-row-start: 3;
-    grid-column-start: 2;
-}
-
-.item7{
-    grid-row-start: 4;
-    grid-row-end: 6;
-}
-
-.item8{
-    grid-row-start: 4;
-    grid-column-start: 2;
-}
-
-.item9{
-    grid-column-start: 3;
-    grid-row-start: 4;
-}
-
-.item10{
-    grid-row-start: 5;
-    grid-column-start: 2;
-}
-
-.item11{
-    grid-column-start: 3;
-    grid-row-start: 5;
-}
