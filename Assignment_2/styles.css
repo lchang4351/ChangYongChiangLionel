@@ -1,0 +1,118 @@
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+header{
+    color: white;
+    background-color: #93d0f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Add in your own customisations */
+
+table, th, td{
+    border: 1px solid;
+    border-color: #ddd;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+th, td{
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+
+
+section ul a{
+    color: #0079c1;
+
+}
+
+footer{
+    background-color: #93d0f4;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: grid;
+    border: 1px solid;
+    border-color: #ddd;
+    border-collapse: collapse;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.container > span{
+    border: 1px solid;
+    border-color: #ddd;
+    border-collapse: collapse;
+    padding: 10px;
+}   
+
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.item2{
+    grid-row-start: 2;
+}
+
+.item3{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+}
+
+.item4{
+    grid-row-start: 3;
+}
+
+.item6{
+    grid-row-start: 3;
+    grid-column-start: 2;
+}
+
+.item7{
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+.item8{
+    grid-row-start: 4;
+    grid-column-start: 2;
+}
+
+.item9{
+    grid-column-start: 3;
+    grid-row-start: 4;
+}
+
+.item10{
+    grid-row-start: 5;
+    grid-column-start: 2;
+}
+
+.item11{
+    grid-column-start: 3;
+    grid-row-start: 5;
+}
