@@ -43,18 +43,16 @@ table{
 }
 
 
-
-section ul a{
+.links{
     color: #0079c1;
-
 }
 
 footer{
     background-color: #93d0f4;
     padding: 10px;
     color: white;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    
 }
 
 
