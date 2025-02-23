@@ -6,3 +6,10 @@ const disneyData = {
 };
 
 // Write your code below
+
+console.log(typeof(disneyData.open))
+
+disneyData["volume"] = "1512311"
+
+console.log(disneyData)
+console.log(typeof(disneyData.volume))
