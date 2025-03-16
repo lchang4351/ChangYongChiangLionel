@@ -1,23 +1,71 @@
 // root.js
 
-function PublicBlogPost() {
-
+function PublicBlogPost(props) {
+  return(
+    <div className = 'blog-post'>
+      <h2>{props.title}</h2>
+      <div className = 'meta'>
+        <p>{props.author} on {props.date}</p>
+      </div>
+      <p>{props.content}</p>
+    </div>
+  )
 }
 
-function PrivateBlogPost() {
-
+function PrivateBlogPost(props) {
+  return(
+    <div className = 'private-posts'>
+      <h2>{props.title}</h2>
+      <div className = 'meta'>
+        <p>{props.author} on {props.date}</p>
+      </div>
+      <p>The content of this post is private</p>
+    </div>
+  )
 }
 
-function BlogList() {
-
+function BlogList({blogContent}) {
+ return(
+  <div className = 'blog-list'>
+    {blogContent.map((post, index) => {
+        if (post.isPrivate === true ){
+          return (
+          <PrivateBlogPost 
+            key={index}
+            title={post.title}
+            author={post.author}
+            date={post.date}
+          />)
+        }
+      return (
+        <PublicBlogPost 
+          key={index}
+          title={post.title}
+          author={post.author}
+          date={post.date}
+          content={post.content}
+        />
+      );
+    })}
+  </div>
+ )
 }
 
-function Header() {
-
+function Header(props) {
+  return (
+    <header>
+      <h1>{props.title}</h1>
+      <p>{props.tagline}</p>
+    </header>
+  );
 }
 
-function Footer() {
-
+function Footer(props) {
+  return (
+    <footer>
+      <p>&#169; {props.year} My Blog. All rights reserved.</p>
+    </footer>
+  )
 };
 
 function App() {
@@ -58,7 +106,13 @@ function App() {
       isPrivate: false
     }
   ];
-
+  return (
+    <>
+      <Header title="My Blog" tagline="A blog about everything" />
+      <BlogList blogContent={blogPosts} />
+      <Footer year="2024"/>
+    </>
+  );
 };
 
 const domContainer = document.getElementById('root');
